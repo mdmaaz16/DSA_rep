@@ -10,6 +10,7 @@ public class subarraysumkinlist {
         // Initialize with sum 0 at index -1 to handle subarrays starting from index 0
         sumMap.put(0, -1);
 
+
         for (int i = 0; i < a.length; i++) {
             sum += a[i];
             int rem = sum - k;
@@ -33,7 +34,7 @@ public class subarraysumkinlist {
     }
 
     public static void main(String[] args) {
-        int[] a = {1, 2, 3, 2, 1, -3, 2, -1};
+        int[] a = {1,2,3,4,5,6};
         int k = 3;
         findVal(a, k);
     }

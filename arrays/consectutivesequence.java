@@ -26,3 +26,27 @@ public class consectutivesequence {
         find(a);
     }
 }
+
+//solution  2
+class Solution {
+    public int longestConsecutive(int[] nums) {
+        Arrays.sort(nums);
+        int c=0,res=0;
+        for(int i=0;i<nums.length-1;i++){
+            if(nums[i]==nums[i+1]){
+                continue;
+            }
+            if(nums[i]==nums[i+1]-1){
+                c++;
+                res=Math.max(res,c);
+            }
+            else{
+                c=0;
+            }
+        }
+        if(nums.length==0){
+            return 0;
+        }
+        return res+1;
+    }
+}
